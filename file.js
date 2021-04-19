@@ -4,6 +4,16 @@ export function filterByTerm(inputArr, searchTerm) {
   });
 }
 
+export function fillDummyData() {
+  var dummyData = [
+    ["tom", "https://game.thronemaster.net/images/houseS.gif", "1"],
+    ["necrach", "https://game.thronemaster.net/images/houseB.gif", "2"],
+    ["We_Do_Not_Sow", "https://game.thronemaster.net/images/houseG.gif", "3"],
+    ["Ser Hodor", "https://game.thronemaster.net/images/houseL.gif", "4"],
+  ];
+  return dummyData;
+}
+
 export function loadThrones(link) {
   const https = require("https");
 
