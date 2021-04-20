@@ -1,5 +1,8 @@
-import { useCallback } from "react";
-import { filterByTerm, loadThrones } from "../file";
+export function filterByTerm(inputArr, searchTerm) {
+  return inputArr.filter(function (arrayElement) {
+    return arrayElement.url.match(searchTerm);
+  });
+}
 
 describe("Filter function", () => {
   test("it should filter by a search term (link)", () => {
@@ -15,15 +18,5 @@ describe("Filter function", () => {
     let y = 2;
 
     expect(filterByTerm(input, "link")).toEqual(output);
-  });
-
-  test("get some json/html", () => {
-    const input = "https://www.thronemaster.net/?goto=gaming&sub=my_games";
-
-    const output = "???";
-
-    loadThrones(input, () => {
-      console.log("test");
-    });
   });
 });
